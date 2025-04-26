@@ -1,0 +1,98 @@
+@define-color bg_dim #232a2e;
+@define-color bg0 #2d353b;
+@define-color bg1 #343f44;
+@define-color bg2 #3d484d;
+@define-color bg3 #475258;
+@define-color bg4 #4f585e;
+@define-color bg5 #56635f;
+@define-color bg_visual #543a48;
+@define-color bg_red #514045;
+@define-color bg_green #425047;
+@define-color bg_blue #3a515d;
+@define-color bg_yellow #4d4c43;
+@define-color fg #d3c6aa;
+@define-color red #e67e80;
+@define-color orange #e69875;
+@define-color yellow #dbbc7f;
+@define-color green #a7c080;
+@define-color aqua #83c092;
+@define-color blue #7fbbb3;
+@define-color purple #d699b6;
+@define-color grey0 #7a8478;
+@define-color grey1 #859289;
+@define-color grey2 #9da9a0;
+
+/* margin: top right bottom left */
+/* Spacing outside the element */
+
+/* padding: top right bottom left */
+/* Spacing inside the element */
+
+* {
+	/*font-family: ComicShannsMono Nerd Font;*/
+	font-family: FontAwesome;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+#clock,
+#workspaces,
+#window,
+#network,
+#custom-pacman,
+#memory,
+#temperature,
+#cpu,
+#pulseaudio,
+#custom-powermenu {
+	background-color: @bg0;
+	color: @fg;
+
+	padding: 0 8px;
+
+	border-bottom-width: 5px;
+	border-bottom-color: @bg5;
+	border-bottom-style: solid;
+}
+
+#workspaces button.active {
+	background-color: @blue;
+	color: @bg0;
+	border-radius: 10px;
+}
+
+#network {
+	font-size: 24px;
+	padding-left: 12px;
+	padding-right: 20px;
+
+	border-radius: 10px 0 0 10px;
+}
+
+#custom-powermenu {
+	background-color: @red;
+	color: @bg0;
+	border-bottom-color: #9e0906;
+	border-radius: 0 10px 10px 0;
+
+	font-size: 20px;
+	padding-left: 12px;
+	padding-right: 16px;
+}
+
+#clock,
+#workspaces,
+#window {
+	border-radius: 10px;
+	margin: 0 3px;
+}
+
+#pulseaudio.muted,
+#pulseaudio.bluetooth-muted {
+	font-size: 24px;
+}
+
